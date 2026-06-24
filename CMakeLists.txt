@@ -22,11 +22,30 @@ install(PROGRAMS
   DESTINATION lib/${PROJECT_NAME}
 )
 
-
-# install(TARGETS
-#   subscriber_demo_cpp
+# install(PROGRAMS
+#   scripts/tilt_calculator.py
 #   DESTINATION lib/${PROJECT_NAME}
 # )
+
+install(PROGRAMS
+  scripts/tilt_visualizer.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+install(
+  DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
+)
+
+install(
+  DIRECTORY config
+  DESTINATION share/${PROJECT_NAME}
+)
+
+install(
+  DIRECTORY mesh
+  DESTINATION share/${PROJECT_NAME}
+)
 
 
 ament_package()
